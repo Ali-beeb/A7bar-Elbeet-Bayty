@@ -1,12 +1,10 @@
+import os
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 # إعداد التطبيق وقاعدة البيانات
 app = Flask(__name__)
-# المفتاح السري عشان محدش تاني يقدر يضيف أخبار
-# لازم تغير 'your_super_secret_key' بكلمة سر قوية من اختيارك
-app.config['SECRET_KEY'] = '2887367483762617787364392837'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///news.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -65,3 +63,4 @@ if __name__ == '__main__':
     setup_database()
 
     app.run(debug=True)
+
