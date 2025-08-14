@@ -6,7 +6,7 @@ from datetime import datetime
 app = Flask(__name__)
 # المفتاح السري عشان محدش تاني يقدر يضيف أخبار
 # لازم تغير 'your_super_secret_key' بكلمة سر قوية من اختيارك
-app.config['SECRET_KEY'] = '1928399188399188399188399188399188IIHIFEKWEFKEW'
+app.config['SECRET_KEY'] = '2887367483762617787364392837'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///news.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -63,4 +63,5 @@ def setup_database():
 # الكود ده بيشغل الموقع
 if __name__ == '__main__':
     setup_database()
+
     app.run(debug=True)
